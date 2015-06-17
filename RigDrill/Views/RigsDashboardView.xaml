@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RigDrill.RigsDashboardView">
+	<ContentPage.Content>
+	<StackLayout Padding="10" Orientation="Vertical">
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="3*"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="3*"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<Label Grid.Column="0" Grid.Row="0" Text="Chock A Pressure" XAlign="Center"/>
+			<Label Grid.Column="0" Grid.Row="1" Text="{Binding ChokeAPressure}" FontSize="32" XAlign="Center"/>
+			<Label Grid.Column="1" Grid.Row="0" Text="Chock B Pressure" XAlign="Center"/>
+			<Label Grid.Column="1" Grid.Row="1" Text="{Binding ChokeBPressure}" FontSize="32" XAlign="Center"/>
+
+			<Label Grid.Column="0" Grid.Row="2" Text="Rotary Torque" XAlign="Center"/>
+			<Label Grid.Column="0" Grid.Row="3" Text="{Binding RotaryTorque}" FontSize="32" XAlign="Center"/>
+			<Label Grid.Column="1" Grid.Row="2" Text="Rotray Speed" XAlign="Center"/>
+			<Label Grid.Column="1" Grid.Row="3" Text="{Binding RotarySpeed}" FontSize="32" XAlign="Center"/>
+
+			<Label Grid.ColumnSpan="2" Grid.Row="4" Text="Mud Temperature" XAlign="Center"/>
+			<Label Grid.ColumnSpan="2" Grid.Row="5" Text="{Binding MudTemperature}" FontSize="32" XAlign="Center"/>
+		
+		</Grid>
+	</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
